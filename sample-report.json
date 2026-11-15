@@ -1,0 +1,39 @@
+{
+  "tool": "bsc-spender-reputation-checker",
+  "version": "1.0.0",
+  "chain": "BNB Smart Chain (56)",
+  "wallet": "0x8e546011A4be0c94Ff7bC5Fda6C07D37F723A104",
+  "checkedAtBlock": 133634752,
+  "generatedAt": "2026-11-14T23:51:28.589Z",
+  "discovery": {
+    "logScan": {
+      "method": "eth_getLogs",
+      "status": "unavailable",
+      "reason": "eth_getLogs refused by public RPCs (limit exceeded) over a 5000-block window"
+    },
+    "matrix": {
+      "method": "allowance() eth_call",
+      "tokensScanned": 18,
+      "spendersProbed": 4,
+      "pairsProbed": 72
+    },
+    "limitation": "The matrix only finds approvals to spenders on the curated list. An approval to a spender outside the list can only be found via the event log scan, which public BSC RPCs currently refuse. The checker says so instead of pretending full coverage."
+  },
+  "summary": {
+    "activeApprovals": 0,
+    "byClassification": {
+      "KNOWN-SAFE": 0,
+      "UNKNOWN": 0,
+      "DORMANT": 0
+    },
+    "unlimitedApprovals": 0,
+    "riskScore": 0,
+    "riskBand": "CLEAN"
+  },
+  "findings": [],
+  "rpc": {
+    "calls": 81,
+    "failures": 7,
+    "endpoints": 6
+  }
+}
